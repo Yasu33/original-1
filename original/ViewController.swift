@@ -7,23 +7,41 @@
 //
 
 import UIKit
+import FSCalendar
 
-class ViewController: UIViewController,UITableViewDataSource {
+
+
+class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance  {
     
-    //storyboardで扱うTableViewを宣言
-    @IBOutlet var table: UITableView!
+    
+    
+    
+    @IBOutlet var calendar: FSCalendar!
+    @IBOutlet var labelDate: UILabel!
+    @IBOutlet var schedulelabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        //テーブルビューのデータソースメソッドはViewControllerクラスに書くよ、という設定
-        table.dataSource = self
+        self.calendar.dataSource = self
+        self.calendar.delegate = self
+        
+        
     }
-//セルの数を設定
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
-    }
+
 //IDtukino
+    
+    func calendar(_ calender: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        
+        let tmpDate = Calendar(identifier: .gregorian)
+        let year = tmpDate.component (.year, from: date)
+        let month = tmpDate.component (.month, from: date)
+        let day = tmpDate.component (.day, from: date)
+        labelDate.text = "\(year)/\(month)/\(day)"
+        
+        
+    }
+    
 }
 
