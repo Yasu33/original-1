@@ -8,13 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController,UITableViewDataSource {
+    
+    //storyboardで扱うTableViewを宣言
+    @IBOutlet var table: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //テーブルビューのデータソースメソッドはViewControllerクラスに書くよ、という設定
+        table.dataSource = self
     }
-
-
+//セルの数を設定
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+//IDtukino
 }
 
