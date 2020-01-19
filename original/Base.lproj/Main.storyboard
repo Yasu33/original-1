@@ -14,7 +14,7 @@
         <scene sceneID="ch6-wI-ci1">
             <objects>
                 <viewController id="4vB-U5-elu" customClass="kojin" customModule="original" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3VW-4K-6Gh">
+                    <view key="view" contentMode="scaleToFill" id="3VW-4K-6Gh" customClass="MemoViewController">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -40,27 +40,46 @@
                     <toolbarItems>
                         <barButtonItem title="Item" id="KXa-PO-yZe"/>
                     </toolbarItems>
-                    <navigationItem key="navigationItem" title="Title" id="YWY-Ij-AGj"/>
+                    <navigationItem key="navigationItem" title="Title" id="YWY-Ij-AGj">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="gaB-iZ-MrS">
+                            <connections>
+                                <action selector="SaveMemo" destination="4vB-U5-elu" id="KyI-E7-VEm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aaX-d3-ZT6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1721.7391304347827" y="-816.29464285714278"/>
+            <point key="canvasLocation" x="1961" y="-816"/>
         </scene>
-        <!--View Controller-->
+        <!--yotei-->
         <scene sceneID="Hva-rX-pKc">
             <objects>
-                <viewController id="sNU-0M-s5Q" sceneMemberID="viewController">
+                <viewController title="yotei" id="sNU-0M-s5Q" customClass="yotei" customModule="original" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qc9-Eg-olq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBw-BT-y9U">
+                                <rect key="frame" x="72" y="83" width="270" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="vbr-O9-psm"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4Jp-qe-k7F"/>
+                    <connections>
+                        <outlet property="label" destination="eBw-BT-y9U" id="PTS-bl-RyW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6GP-l2-Wkb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1722" y="-19"/>
+            <point key="canvasLocation" x="1722" y="-94"/>
         </scene>
         <!--Data Source-->
         <scene sceneID="tne-QT-ifu">
@@ -70,15 +89,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-4n-aB1" customClass="FSCalendar">
-                                <rect key="frame" x="33" y="185" width="348" height="207"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="d8e-d6-NKN"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fbc-K8-Sa2"/>
-                                </connections>
-                            </view>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xcT-g8-GBI">
                                 <rect key="frame" x="121" y="111" width="248" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -92,40 +102,28 @@
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="40"/>
                                 <state key="normal" title="個人"/>
                                 <connections>
-                                    <segue destination="4vB-U5-elu" kind="show" id="QJg-LX-DWQ"/>
+                                    <segue destination="4vB-U5-elu" kind="presentation" id="7Fw-bh-hzF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaV-rJ-wVy">
-                                <rect key="frame" x="35" y="400" width="220" height="48"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DZc-4n-aB1" customClass="FSCalendar">
+                                <rect key="frame" x="35" y="185" width="348" height="207"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="27"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MyJ-cF-bod">
-                                <rect key="frame" x="301" y="420" width="68" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                <state key="normal" title="+"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aVS-Ob-rFT">
-                                <rect key="frame" x="47" y="479" width="220" height="214"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="d8e-d6-NKN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fbc-K8-Sa2"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="yAk-hv-t9I">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="ol7-v0-elu"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="hB4-GP-fcg"/>
                     </navigationItem>
                     <connections>
                         <outlet property="calendar" destination="DZc-4n-aB1" id="p8h-xg-R8X"/>
-                        <outlet property="labelDate" destination="vaV-rJ-wVy" id="JC4-Fj-56x"/>
+                        <segue destination="sNU-0M-s5Q" kind="presentation" identifier="toSecond" id="WSN-UZ-y3q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

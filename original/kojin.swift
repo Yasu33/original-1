@@ -17,6 +17,22 @@ class kojin: UIViewController{
 //        <#code#>
 //    }
     
+    @IBAction func SaveMemo(){
+        
+        let alert: UIAlertController = UIAlertController(title:"保存", message: "保存します", preferredStyle: .alert)
+
+    alert.addAction(
+          UIAlertAction(
+    title: "OK",
+    style: .cancel,
+    handler: { action in
+           //ボタンが押された時の動作
+           print("OKボタンが押されました!")
+    }
+    )
+        )
+    present(alert, animated: true, completion: nil) }
+    
     
     @IBOutlet var table: UITableView!
 
