@@ -8,7 +8,7 @@
 
 import UIKit
 import FSCalendar
-
+import Firebase
 
 
 class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance  {
@@ -17,17 +17,26 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     
     
     @IBOutlet var calendar: FSCalendar!
-    @IBOutlet var labelDate: UILabel!
+//    @IBOutlet var labelDate: UILabel!
     //@IBOutlet var schedulelabel: UILabel!
     
     var year: Int!
     var month: Int!
     var day: Int!
-    
+    var db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                }
+            }
+        }
         
         self.calendar.dataSource = self
         self.calendar.delegate = self
@@ -64,7 +73,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         year = tmpDate.component (.year, from: date)
         month = tmpDate.component (.month, from: date)
         day = tmpDate.component (.day, from: date)
-        labelDate.text = "\(String(describing: year))/\(String(describing: month))/\(String(describing: day))"
+//        labelDate.text = "\(String(describing: year))/\(String(describing: month))/\(String(describing: day))"
         
         self.performSegue(withIdentifier: "toSecond", sender: nil)
 //        var counter = 0

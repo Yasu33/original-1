@@ -48,7 +48,6 @@ class kojin: UIViewController, UITableViewDataSource, UITableViewDelegate{
             
             //再びアプリ内に消去した配列を保存
             ud.set(memoArray, forKey: "memoArray")
-            print(ud.object(forKey: "memoArray"))
             //tableviewを更新
             tableView.reloadData()
         }

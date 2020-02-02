@@ -8,6 +8,9 @@ target 'original' do
   # Pods for original
   pod 'FSCalendar'
   pod 'CalculateCalendarLogic'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
   target 'originalTests' do
     inherit! :search_paths

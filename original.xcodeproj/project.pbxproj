@@ -10,6 +10,7 @@
 		1FEA2370FB877C0E038F53A7 /* Pods_original_originalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A242DCEA8FE62C5885099FC /* Pods_original_originalUITests.framework */; };
 		9680A06523AF0FF600EBB99F /* yotei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680A06423AF0FF500EBB99F /* yotei.swift */; };
 		968D941623D42D070089BB51 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D941523D42D070089BB51 /* AddMemoViewController.swift */; };
+		968D949423E69CB60089BB51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 968D949323E69CB50089BB51 /* GoogleService-Info.plist */; };
 		96F13F892377E87D00B83896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F13F882377E87D00B83896 /* AppDelegate.swift */; };
 		96F13F8B2377E87D00B83896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F13F8A2377E87D00B83896 /* ViewController.swift */; };
 		96F13F8E2377E87D00B83896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F13F8C2377E87D00B83896 /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		90B74A9C0277FD74997999A4 /* Pods_original.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_original.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9680A06423AF0FF500EBB99F /* yotei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotei.swift; sourceTree = "<group>"; };
 		968D941523D42D070089BB51 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		968D949323E69CB50089BB51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		96F13F852377E87D00B83896 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F13F882377E87D00B83896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F13F8A2377E87D00B83896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		96F13F872377E87D00B83896 /* original */ = {
 			isa = PBXGroup;
 			children = (
+				968D949323E69CB50089BB51 /* GoogleService-Info.plist */,
 				96F13FB8238A2E3100B83896 /* ヒラギノ丸ゴ ProN W4.ttc */,
 				96F13F882377E87D00B83896 /* AppDelegate.swift */,
 				96F13F8A2377E87D00B83896 /* ViewController.swift */,
@@ -288,6 +291,7 @@
 			files = (
 				96F13F932377E88000B83896 /* LaunchScreen.storyboard in Resources */,
 				96F13F902377E88000B83896 /* Assets.xcassets in Resources */,
+				968D949423E69CB60089BB51 /* GoogleService-Info.plist in Resources */,
 				96F13FB9238A2E3100B83896 /* ヒラギノ丸ゴ ProN W4.ttc in Resources */,
 				96F13F8E2377E87D00B83896 /* Main.storyboard in Resources */,
 			);
