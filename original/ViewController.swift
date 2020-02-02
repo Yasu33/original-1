@@ -31,7 +31,9 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         
         self.calendar.dataSource = self
         self.calendar.delegate = self
+        self.dismiss(animated: true, completion: nil)
         }
+   
     
 //    @IBOutlet weak var textField: UITextField!
     
@@ -62,7 +64,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
         year = tmpDate.component (.year, from: date)
         month = tmpDate.component (.month, from: date)
         day = tmpDate.component (.day, from: date)
-        labelDate.text = "\(String(describing: year))/\(month ?? <#default value#>)/\(String(describing: day))"
+        labelDate.text = "\(String(describing: year))/\(String(describing: month))/\(String(describing: day))"
         
         self.performSegue(withIdentifier: "toSecond", sender: nil)
 //        var counter = 0

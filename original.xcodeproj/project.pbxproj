@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1FEA2370FB877C0E038F53A7 /* Pods_original_originalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A242DCEA8FE62C5885099FC /* Pods_original_originalUITests.framework */; };
 		9680A06523AF0FF600EBB99F /* yotei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680A06423AF0FF500EBB99F /* yotei.swift */; };
+		968D941623D42D070089BB51 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D941523D42D070089BB51 /* AddMemoViewController.swift */; };
 		96F13F892377E87D00B83896 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F13F882377E87D00B83896 /* AppDelegate.swift */; };
 		96F13F8B2377E87D00B83896 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F13F8A2377E87D00B83896 /* ViewController.swift */; };
 		96F13F8E2377E87D00B83896 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96F13F8C2377E87D00B83896 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		5A242DCEA8FE62C5885099FC /* Pods_original_originalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_original_originalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B74A9C0277FD74997999A4 /* Pods_original.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_original.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9680A06423AF0FF500EBB99F /* yotei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotei.swift; sourceTree = "<group>"; };
+		968D941523D42D070089BB51 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
 		96F13F852377E87D00B83896 /* original.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = original.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F13F882377E87D00B83896 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96F13F8A2377E87D00B83896 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				96F13F912377E88000B83896 /* LaunchScreen.storyboard */,
 				96F13F942377E88000B83896 /* Info.plist */,
 				96F13FB62377F13700B83896 /* kojin.swift */,
+				968D941523D42D070089BB51 /* AddMemoViewController.swift */,
 			);
 			path = original;
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9680A06523AF0FF600EBB99F /* yotei.swift in Sources */,
+				968D941623D42D070089BB51 /* AddMemoViewController.swift in Sources */,
 				96F13F8B2377E87D00B83896 /* ViewController.swift in Sources */,
 				96F13FB72377F13700B83896 /* kojin.swift in Sources */,
 				96F13F892377E87D00B83896 /* AppDelegate.swift in Sources */,
