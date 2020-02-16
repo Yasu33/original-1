@@ -32,7 +32,15 @@ class AddMemoViewController: UIViewController {
                 ud.set(saveMemoArray, forKey: "memoArray")
             }else{
                 let alert: UIAlertController = UIAlertController(title: "エラー", message: "何も追加されていません", preferredStyle: .alert)
+//                alert.addAction(
+//                    UIAlertAction(title: "OK", style: .default, handler: {action in
+//                        //ボタンが押された時の動作
+//                        print("OKボタンが押されました!")
+                
+                        
+                       
                 present(alert, animated: true,completion: nil)
+                
             }
         }else{
             //最初、何も書かれていない場合
@@ -44,19 +52,27 @@ class AddMemoViewController: UIViewController {
                 ud.set(newMemoArray, forKey: "memoArray")
             }else{
                 let alert: UIAlertController = UIAlertController(title: "エラー", message: "何も追加されていません", preferredStyle: .alert)
+//                alert.addAction(
+//                    UIAlertAction(title: "OK", style: .default, handler: {action in
+//                        //ボタンが押された時の動作
+//                        print("OKボタンが押されました!")
+//                           )
+//                        )
                 present(alert, animated: true,completion: nil)
+                
             }
-            }
-        let alert: UIAlertController = UIAlertController(title: "保存完了", message: "", preferredStyle: .alert)
+        }
+             let alert: UIAlertController = UIAlertController(title: "保存完了", message: "", preferredStyle: .alert)
         alert.addAction(
             UIAlertAction(title: "OK", style: .default, handler: {action in
                                        //ボタンが押された時の動作
-                                        print("OKボタンが押されました!")
+                print("OKボタンが押されました!")
             }
                 )
             )
         
         present(alert, animated: true,completion: nil)
+         self.navigationController?.popViewController(animated: true)
         
     /*
     // MARK: - Navigation
@@ -69,9 +85,13 @@ class AddMemoViewController: UIViewController {
     */
         
       
+    
     }
-    @IBAction func back() {
-        self.dismiss(animated: true, completion: nil)
-    }
+
+        @IBAction func back() {
+            self.dismiss(animated: true, completion: nil)
+}
+
+
 }
 

@@ -24,14 +24,13 @@ class kojin: UIViewController, UITableViewDataSource, UITableViewDelegate{
             return cell
         }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        self.performSegue(withIdentifier: "toDetail", sender: nil)
-//        //押したら押した状態を解除
-//        tableView.deselectRow(at: indexPath, animated: true)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "toDetail", sender: nil)
+        //押したら押した状態を解除
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
-    @IBOutlet var titleTextField: UITextField!
-    @IBOutlet var contentTextView: UITextView!
+    
     
     func loadMemo(){
         if ud.array(forKey: "memoArray") != nil{
@@ -52,6 +51,8 @@ class kojin: UIViewController, UITableViewDataSource, UITableViewDelegate{
             tableView.reloadData()
         }
     }
+    @IBOutlet var titleTextField: UITextField!
+    @IBOutlet var contentTextView: UITextView!
     
     @IBAction func SaveMemo() {
         let saveData: UserDefaults = UserDefaults.standard
@@ -88,7 +89,18 @@ class kojin: UIViewController, UITableViewDataSource, UITableViewDelegate{
     override func viewWillAppear(_ animated: Bool) {
         loadMemo()
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //destinationのクラッシュ防ぐ
+        if segue.identifier == "toDetail"{
+            //detailViewControllerを取得
+            //as! DetailViewControllerでダウンキャストしている
+            let detailViewController = segue.destination as! DetailViewController
+            //遷移前に選ばれているCellが取得できる
+            let selectedIndexPath = memoTableView.indexPathForSelectedRow!
+            detailViewController.selectedMemo = memoArray[selectedIndexPath.row]
+            detailViewController.selectedRow = selectedIndexPath.row
+        }
+    }
     
     @IBAction func back() {
         self.dismiss(animated: true, completion: nil)

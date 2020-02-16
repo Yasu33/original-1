@@ -65,7 +65,22 @@ class yotei: UIViewController {
         super.viewDidLoad()
         print(year!,month!,day!)
         label.text = "\(year!)/\(month!)/\(day!)"
+        
+        db.collection("users").whereField("Date", isEqualTo: "\(year!)/\(month!)/\(day!)" ).getDocuments() { (querySnapshot, err) in
+           
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    print("\(document.documentID) => \(document.data())")
+                    print(document.data()["text"]!)
+                    self.textview.text = document.data()["text"] as! String
+                }
+            }
+        }
     }
+    
+    
 
 
         // Do any additional setup after loading the view.
