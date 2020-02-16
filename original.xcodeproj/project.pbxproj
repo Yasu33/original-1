@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1FEA2370FB877C0E038F53A7 /* Pods_original_originalUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A242DCEA8FE62C5885099FC /* Pods_original_originalUITests.framework */; };
+		9640CF4323E6F77200FCB708 /* スクリーンショット 2020-02-02 21.25.05.png in Resources */ = {isa = PBXBuildFile; fileRef = 9640CF4223E6F77100FCB708 /* スクリーンショット 2020-02-02 21.25.05.png */; };
+		9640CF4523EC4D1E00FCB708 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640CF4423EC4D1E00FCB708 /* DetailViewController.swift */; };
 		9680A06523AF0FF600EBB99F /* yotei.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9680A06423AF0FF500EBB99F /* yotei.swift */; };
 		968D941623D42D070089BB51 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 968D941523D42D070089BB51 /* AddMemoViewController.swift */; };
 		968D949423E69CB60089BB51 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 968D949323E69CB50089BB51 /* GoogleService-Info.plist */; };
@@ -48,6 +50,8 @@
 		3A52609D6143D59484810C15 /* Pods_originalTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_originalTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A242DCEA8FE62C5885099FC /* Pods_original_originalUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_original_originalUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90B74A9C0277FD74997999A4 /* Pods_original.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_original.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9640CF4223E6F77100FCB708 /* スクリーンショット 2020-02-02 21.25.05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "スクリーンショット 2020-02-02 21.25.05.png"; sourceTree = "<group>"; };
+		9640CF4423EC4D1E00FCB708 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		9680A06423AF0FF500EBB99F /* yotei.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = yotei.swift; sourceTree = "<group>"; };
 		968D941523D42D070089BB51 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
 		968D949323E69CB50089BB51 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		96F13F872377E87D00B83896 /* original */ = {
 			isa = PBXGroup;
 			children = (
+				9640CF4223E6F77100FCB708 /* スクリーンショット 2020-02-02 21.25.05.png */,
 				968D949323E69CB50089BB51 /* GoogleService-Info.plist */,
 				96F13FB8238A2E3100B83896 /* ヒラギノ丸ゴ ProN W4.ttc */,
 				96F13F882377E87D00B83896 /* AppDelegate.swift */,
@@ -146,6 +151,7 @@
 				96F13F942377E88000B83896 /* Info.plist */,
 				96F13FB62377F13700B83896 /* kojin.swift */,
 				968D941523D42D070089BB51 /* AddMemoViewController.swift */,
+				9640CF4423EC4D1E00FCB708 /* DetailViewController.swift */,
 			);
 			path = original;
 			sourceTree = "<group>";
@@ -290,6 +296,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96F13F932377E88000B83896 /* LaunchScreen.storyboard in Resources */,
+				9640CF4323E6F77200FCB708 /* スクリーンショット 2020-02-02 21.25.05.png in Resources */,
 				96F13F902377E88000B83896 /* Assets.xcassets in Resources */,
 				968D949423E69CB60089BB51 /* GoogleService-Info.plist in Resources */,
 				96F13FB9238A2E3100B83896 /* ヒラギノ丸ゴ ProN W4.ttc in Resources */,
@@ -424,6 +431,7 @@
 				9680A06523AF0FF600EBB99F /* yotei.swift in Sources */,
 				968D941623D42D070089BB51 /* AddMemoViewController.swift in Sources */,
 				96F13F8B2377E87D00B83896 /* ViewController.swift in Sources */,
+				9640CF4523EC4D1E00FCB708 /* DetailViewController.swift in Sources */,
 				96F13FB72377F13700B83896 /* kojin.swift in Sources */,
 				96F13F892377E87D00B83896 /* AppDelegate.swift in Sources */,
 			);
