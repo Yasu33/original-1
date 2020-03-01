@@ -10,6 +10,11 @@ import UIKit
 
 class RoguinViewController: UIViewController {
 
+    @IBOutlet var grouptextfield: UITextField!
+    @IBOutlet var passwordtextfield: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
